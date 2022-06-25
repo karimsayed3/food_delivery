@@ -1,24 +1,21 @@
 import 'package:flutter/material.dart';
 
-class BigText extends StatelessWidget {
-  BigText(
+class SmallText extends StatelessWidget {
+  SmallText(
       {Key? key,
       this.color = const Color(0xFF332d2b),
       required this.text,
-      this.overflow = TextOverflow.ellipsis,
-      this.size = 20})
+      this.size = 12})
       : super(key: key);
 
   Color color;
   final String text;
   double size;
-  TextOverflow overflow;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       text,
-      overflow: overflow,
       style: TextStyle(
         color: color,
         fontSize: size,
