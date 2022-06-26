@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:food_delivery/Widgets/big_text.dart';
 import 'package:food_delivery/Widgets/small_text.dart';
 import 'package:food_delivery/colors.dart';
+import 'package:food_delivery/presentation/home/food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -61,6 +62,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),
               ),
             ),
+            FoodPageBody(),
           ],
         ),
       ),
