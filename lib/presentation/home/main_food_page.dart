@@ -3,8 +3,9 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:food_delivery/Widgets/big_text.dart';
 import 'package:food_delivery/Widgets/small_text.dart';
-import 'package:food_delivery/colors.dart';
+import 'package:food_delivery/utils/colors.dart';
 import 'package:food_delivery/presentation/home/food_page_body.dart';
+import 'package:food_delivery/utils/dimantions.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({Key? key}) : super(key: key);
@@ -20,11 +21,12 @@ class _MainFoodPageState extends State<MainFoodPage> {
       child: Scaffold(
         body: Column(
           children: [
+            // Header Section
             Container(
               // color: Colors.amber,
               child: Container(
-                margin: EdgeInsets.only(top: 20, bottom: 20),
-                padding: EdgeInsets.only(left: 20, right: 20),
+                margin: EdgeInsets.only(top: Dimantions.height20, bottom: Dimantions.height20),
+                padding: EdgeInsets.only(left: Dimantions.width20, right: Dimantions.width20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -46,14 +48,14 @@ class _MainFoodPageState extends State<MainFoodPage> {
                     ),
                     Center(
                       child: Container(
-                        width: 45,
-                        height: 45,
+                        width: Dimantions.width45,
+                        height: Dimantions.height45,
                         child: Icon(
                           Icons.search,
                           color: Colors.white,
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
+                          borderRadius: BorderRadius.circular(Dimantions.radius15),
                           color: AppColors.mainColor,
                         ),
                       ),
@@ -62,7 +64,9 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 ),
               ),
             ),
+            // Food Body Section
             FoodPageBody(),
+
           ],
         ),
       ),
