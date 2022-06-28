@@ -21,7 +21,7 @@ class _MainFoodPageState extends State<MainFoodPage> {
         body: Column(
           children: [
             Container(
-              color: Colors.amber,
+              // color: Colors.amber,
               child: Container(
                 margin: EdgeInsets.only(top: 20, bottom: 20),
                 padding: EdgeInsets.only(left: 20, right: 20),
