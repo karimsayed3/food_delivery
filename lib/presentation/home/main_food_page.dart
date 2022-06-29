@@ -25,8 +25,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
             Container(
               // color: Colors.amber,
               child: Container(
-                margin: EdgeInsets.only(top: Dimantions.height20, bottom: Dimantions.height20),
-                padding: EdgeInsets.only(left: Dimantions.width20, right: Dimantions.width20),
+                margin: EdgeInsets.only(
+                    top: Dimantions.height20, bottom: Dimantions.height20),
+                padding: EdgeInsets.only(
+                    left: Dimantions.width20, right: Dimantions.width20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -38,7 +40,10 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         ),
                         Row(
                           children: [
-                            SmallText(text: 'City',color: Colors.black45,),
+                            SmallText(
+                              text: 'City',
+                              color: Colors.black45,
+                            ),
                             Icon(
                               Icons.arrow_drop_down_outlined,
                             ),
@@ -55,7 +60,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                           color: Colors.white,
                         ),
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(Dimantions.radius15),
+                          borderRadius:
+                              BorderRadius.circular(Dimantions.radius15),
                           color: AppColors.mainColor,
                         ),
                       ),
@@ -65,7 +71,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
               ),
             ),
             // Food Body Section
-            FoodPageBody(),
+            Expanded(
+              child: SingleChildScrollView(
+                child: FoodPageBody(),
+              ),
+            ),
           ],
         ),
       ),

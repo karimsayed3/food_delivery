@@ -99,24 +99,40 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         ),
 
         Container(
-          height: 600,
+          margin: EdgeInsets.only(left: Dimantions.width30),
           child: ListView.builder(
             physics: NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return Container(
-                width: 120,
-                height: 120,
                 child: Row(
                   children: [
                     Container(
+                      margin: EdgeInsets.only(bottom: Dimantions.height10),
+                      width: 120,
+                      height: 120,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(Dimantions.radius15),
-                        image:  DecorationImage(
-                          image: AssetImage(
-                            'assets/images/ss.png'
-                          ),
-                        )
+                        borderRadius:
+                            BorderRadius.circular(Dimantions.radius15),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: AssetImage('assets/images/ss.png'),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: Dimantions.width10,
+                    ),
+                    Container(
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                      ),
+                      child: Column(
+                        children: [
+                          BigText(text: 'Sandwitch'),
+                          
+                        ],
                       ),
                     ),
                   ],
