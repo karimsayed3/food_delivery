@@ -13,6 +13,7 @@ class Dimantions{
   static double height10 = screenHeight/67.2;
   static double height15= screenHeight/44.8;
   static double height45= screenHeight/14.93;
+  static double height30= screenHeight/22.4;
 
   // width
   static double width10 = screenHeight/84.4;
@@ -23,6 +24,7 @@ class Dimantions{
 
   // fonts and radius
   static double font20 = screenHeight/33.6;
+  static double font12 = screenHeight/56;
   static double radius20 = screenHeight/33.6;
   static double radius30 = screenHeight/22.4;
   static double radius15 = screenHeight/44.8;

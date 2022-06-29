@@ -66,7 +66,6 @@ class _MainFoodPageState extends State<MainFoodPage> {
             ),
             // Food Body Section
             FoodPageBody(),
-
           ],
         ),
       ),

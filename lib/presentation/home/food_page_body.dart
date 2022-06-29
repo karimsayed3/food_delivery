@@ -54,6 +54,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             itemCount: 5,
           ),
         ),
+
         // Dots Section
         DotsIndicator(
           dotsCount: 5,
@@ -66,16 +67,20 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 borderRadius: BorderRadius.circular(Dimantions.radius5)),
           ),
         ),
+
         // Popular Food
         SizedBox(
-          height: Dimantions.height20,
+          height: Dimantions.height30,
         ),
         Container(
-          margin: EdgeInsets.only(left: Dimantions.width10),
+          margin: EdgeInsets.only(left: Dimantions.width30),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               BigText(text: 'Popular'),
+              SizedBox(
+                width: Dimantions.width10,
+              ),
               Container(
                 child: SmallText(
                   text: '.',
@@ -87,9 +92,38 @@ class _FoodPageBodyState extends State<FoodPageBody> {
               ),
               Container(
                   child: SmallText(
-                text: 'text',
+                text: 'Food Pairing',
               )),
             ],
+          ),
+        ),
+
+        Container(
+          height: 600,
+          child: ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+            itemBuilder: (context, index) {
+              return Container(
+                width: 120,
+                height: 120,
+                child: Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(Dimantions.radius15),
+                        image:  DecorationImage(
+                          image: AssetImage(
+                            'assets/images/ss.png'
+                          ),
+                        )
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
+            itemCount: 5,
           ),
         ),
       ],
